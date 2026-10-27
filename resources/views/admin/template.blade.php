@@ -58,19 +58,19 @@
 <body>
     <div class="admin-sidebar shadow">
         <h4 class="text-center fw-bold text-white pb-3 border-bottom border-secondary">Admin Panel</h4>
-        <ul class="nav flex-column">
+        <ul class="nav flex-column mt-3">
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{ route('admin.home') }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Projects</a>
+                <a class="nav-link text-white" href="{{ route('admin.projects.index') }}">Project</a>
             </li>
         </ul>
     </div>
     <div class="admin-content">
-        <div
-            class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom bg-white rounded shadow-sm">
-            <h3>Admin dashboard</h3>
+        <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom bg-white pb-3 rounded shadow-sm">
+            <h3 class="fw-bold mb-0">Dashboard</h3>
+            <span class="text-muted fw-semibold">Halo, Administrator</span>
         </div>
         @yield('content')
     </div>

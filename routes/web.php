@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,9 @@ Route::get('/about', function () {
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () {
-        return view('admin.template');
+        return view('admin.home');
     })->name('home');
+
+ Route::resource('projects', AdminProjectController::class);
+
 });
